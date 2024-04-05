@@ -3,6 +3,12 @@
 import 'package:flutter/material.dart';
 
 abstract class Styles {
-  static const MediumTitle =
+  static const textStyle24Bold =
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+
+  static const textStyle18Bold =
+      TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
+
+  static const textStyle16SemiBold =
+      TextStyle(fontSize: 16, fontWeight: FontWeight.w500);
 }

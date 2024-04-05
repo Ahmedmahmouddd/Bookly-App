@@ -17,7 +17,7 @@ class MediumTitle extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Text(
           title,
-          style: Styles.MediumTitle,
+          style: Styles.textStyle24Bold,
         ),
       ),
     );
