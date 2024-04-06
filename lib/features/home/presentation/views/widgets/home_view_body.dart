@@ -7,6 +7,7 @@ import 'package:bookly/features/home/presentation/views/widgets/featured_books_l
 import 'package:bookly/features/home/presentation/views/widgets/medium_title.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -23,11 +24,11 @@ class HomeViewBody extends StatelessWidget {
                 CustomAppBar(
                   widget: Image.asset(AssetsData.logo, height: 24),
                   iconButton: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        FontAwesomeIcons.magnifyingGlass,
-                        size: 24
-                      )),
+                      onPressed: () {
+                        GoRouter.of(context).push('/SearchView');
+                      },
+                      icon: const Icon(FontAwesomeIcons.magnifyingGlass,
+                          size: 24)),
                 ),
                 const FeaturedBooksListView(),
                 const SizedBox(height: 30),
