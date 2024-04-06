@@ -14,7 +14,7 @@ class BookRate extends StatelessWidget {
       child: Row(
         mainAxisAlignment: mainAxisAlignment!,
         children: [
-          const Icon(FontAwesomeIcons.solidStar, color: Colors.amber, size: 18),
+          const Icon(FontAwesomeIcons.solidStar, color: Colors.amber, size: 16),
           const SizedBox(width: 6),
           const Text(
             '4.8',

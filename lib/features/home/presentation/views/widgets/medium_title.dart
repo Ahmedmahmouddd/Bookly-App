@@ -12,7 +12,7 @@ class MediumTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Align(
         alignment: Alignment.centerLeft,
         child: Text(
