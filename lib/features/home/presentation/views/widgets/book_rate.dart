@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BookRate extends StatelessWidget {
-  const BookRate({super.key, this.mainAxisAlignment= MainAxisAlignment.center});
+  const BookRate(
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.center});
 
   final MainAxisAlignment? mainAxisAlignment;
 
