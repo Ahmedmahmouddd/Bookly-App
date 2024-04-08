@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:bookly/core/errors/failures.dart';
 import 'package:bookly/core/utils/api_service.dart';
 import 'package:bookly/features/home/data/models/book_model.dart';
@@ -34,8 +36,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetshFeaturedBooks() async {
     try {
       var data = await apiService.get(
-          endPoint:
-              'volumes?Filtering=free-ebooks&q=subject:numbers');
+          endPoint: 'volumes?Filtering=free-ebooks&q=subject:numbers');
 
       List<BookModel> books = [];
       // for (var item in data['items']) {
