@@ -2,6 +2,8 @@
 //
 //     final bookModel = bookModelFromJson(jsonString);
 
+// ignore_for_file: constant_identifier_names
+
 import 'dart:convert';
 
 BookModel bookModelFromJson(String str) => BookModel.fromJson(json.decode(str));
