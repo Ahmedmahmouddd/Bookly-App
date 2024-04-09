@@ -18,12 +18,7 @@ class HomeRepoImpl implements HomeRepo {
           endPoint:
               'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:numbers');
 
-      List<BookModel> books = [];
-      // for (var item in data['items']) {
-      //   books.add(BookModel.fromJson(item));
-      // }
-
-      return right(books);
+      return right([BookModel.fromJson(data)]);
     } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
@@ -38,12 +33,8 @@ class HomeRepoImpl implements HomeRepo {
       var data = await apiService.get(
           endPoint: 'volumes?Filtering=free-ebooks&q=subject:numbers');
 
-      List<BookModel> books = [];
-      // for (var item in data['items']) {
-      //   books.add(BookModel.fromJson(item));
-      // }
+            return right([BookModel.fromJson(data)]);
 
-      return right(books);
     } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
