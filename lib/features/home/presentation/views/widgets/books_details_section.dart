@@ -31,7 +31,10 @@ class BookDetailsSection extends StatelessWidget {
         ),
         SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,
-            child: const FeaturedBooksListViewItem()),
+            child: const FeaturedBooksListViewItem(
+              imageUrl:
+                  'https://feb.kuleuven.be/drc/LEER/visiting-scholars-1/image-not-available.jpg/image',
+            )),
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.8,
           child: const Text(

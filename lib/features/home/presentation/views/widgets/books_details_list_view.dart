@@ -13,7 +13,10 @@ class BooksDetailsListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 6,
         itemBuilder: (context, index) {
-          return const FeaturedBooksListViewItem();
+          return const FeaturedBooksListViewItem(
+            imageUrl:
+                'https://feb.kuleuven.be/drc/LEER/visiting-scholars-1/image-not-available.jpg/image',
+          );
         },
       ),
     );
