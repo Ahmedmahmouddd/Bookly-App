@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksListViewItem extends StatelessWidget {
@@ -10,12 +11,21 @@ class FeaturedBooksListViewItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 2.7 / 4,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(image: NetworkImage(imageUrl))),
-        ),
-      ),
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: CachedNetworkImage(
+              imageUrl: imageUrl,
+              fit: BoxFit.fill,
+              placeholder: (context, url) => const Center(
+                child: CircularProgressIndicator(),
+              ),
+              errorWidget: (context, url, error) => const Icon(
+                Icons.error,
+                size: 32,
+              ),
+            ),
+          )),
     );
   }
 }
