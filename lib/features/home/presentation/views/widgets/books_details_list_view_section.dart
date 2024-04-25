@@ -16,7 +16,7 @@ class BooksDetailsListViewSection extends StatelessWidget {
                 child:
                     Text('you can also like', style: Styles.textStyle21Bold))),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 4.0),
+          padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 16),
           child: BooksDetailsListView(),
         ),
         SizedBox(height: 24),

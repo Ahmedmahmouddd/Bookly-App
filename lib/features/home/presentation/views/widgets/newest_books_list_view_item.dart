@@ -5,8 +5,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellersListViewItem extends StatelessWidget {
-  const BestSellersListViewItem({super.key, required this.bookModelItem});
+class NewestBooksListViewItem extends StatelessWidget {
+  const NewestBooksListViewItem({super.key, required this.bookModelItem});
 
   final Item bookModelItem;
   @override

@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable
 
 import 'package:bookly/core/utils/assets.dart';
-import 'package:bookly/features/home/presentation/views/widgets/best_sellers_list_view.dart';
+import 'package:bookly/features/home/presentation/views/widgets/newest_books_list_view.dart';
 import 'package:bookly/features/home/presentation/views/widgets/customer_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/featured_books_list_view.dart';
 import 'package:bookly/features/home/presentation/views/widgets/medium_title.dart';
@@ -32,11 +32,11 @@ class HomeViewBody extends StatelessWidget {
                 ),
                 const FeaturedBooksListView(),
                 const SizedBox(height: 30),
-                MediumTitle(title: 'Best Sellers'),
+                MediumTitle(title: 'Newest Items'),
               ],
             ),
           ),
-          const SliverToBoxAdapter(child: BestSellersListView()),
+          const SliverToBoxAdapter(child: NewestBooksListView()),
         ],
       ),
     );
