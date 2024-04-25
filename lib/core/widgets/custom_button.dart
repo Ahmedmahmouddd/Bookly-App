@@ -6,11 +6,13 @@ class CustomButton extends StatelessWidget {
       this.shape,
       this.style,
       required this.data,
-      this.backgroundColor});
+      this.backgroundColor,
+      this.onPressed});
   final OutlinedBorder? shape;
   final TextStyle? style;
   final String data;
   final Color? backgroundColor;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -19,7 +21,7 @@ class CustomButton extends StatelessWidget {
         child: TextButton(
           style: TextButton.styleFrom(
               shape: shape, backgroundColor: backgroundColor),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(
             data,
             style: style,

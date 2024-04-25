@@ -24,7 +24,9 @@ class BookDetailsViewBody extends StatelessWidget {
                     bookModelItem: bookModelItem,
                   ),
                   const SizedBox(height: 16),
-                  const BooksAction(),
+                  BooksAction(
+                    bookModelItem: bookModelItem,
+                  ),
                   const SimilarBooksListViewSection()
                 ],
               ),
