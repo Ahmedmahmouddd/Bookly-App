@@ -15,18 +15,16 @@ class FeaturedBooksListViewItem extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: CachedNetworkImage(
-              imageUrl: imageUrl,
-              fit: BoxFit.fill,
-              placeholder: (context, url) => const Center(
-                child: CircularProgressIndicator(),
-              ),
-              errorWidget: (context, url, error) => const Icon(
-                Icons.error,
-                size: 32,
-              ),
-            ),
+                imageUrl: imageUrl,
+                fit: BoxFit.fill,
+                placeholder: (context, url) => const Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                errorWidget: (context, url, error) => const Image(
+                      image: AssetImage('assets/images/no_image.jpg'),
+                      fit: BoxFit.fill,
+                    )),
           )),
     );
   }
 }
-
