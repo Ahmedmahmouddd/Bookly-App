@@ -25,7 +25,7 @@ class BestSellersListView extends StatelessWidget {
           },
         );
       } else if (state is NewestBooksFailure) {
-        return CustomErrorWidget(errMessage: state.errMessage);
+        return Center(child: CustomErrorWidget(errMessage: state.errMessage));
       } else {
         return const Center(child: CircularProgressIndicator());
       }

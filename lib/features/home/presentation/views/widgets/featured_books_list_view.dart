@@ -27,7 +27,7 @@ class FeaturedBooksListView extends StatelessWidget {
             ),
           );
         } else if (state is FeaturedBooksFailure) {
-          return CustomErrorWidget(errMessage: state.errMessage);
+          return Center(child: CustomErrorWidget(errMessage: state.errMessage));
         } else {
           return const CircularProgressIndicator();
         }
