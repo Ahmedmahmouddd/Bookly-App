@@ -4,10 +4,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BookRate extends StatelessWidget {
   const BookRate(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.center});
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.center, required this.count});
 
   final MainAxisAlignment? mainAxisAlignment;
-
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,7 +23,7 @@ class BookRate extends StatelessWidget {
           ),
           const SizedBox(width: 3),
           Text(
-            '(2406)',
+            ' ($count)',
             style: Styles.textStyle18Bold.copyWith(color: Colors.white54),
           )
         ],
