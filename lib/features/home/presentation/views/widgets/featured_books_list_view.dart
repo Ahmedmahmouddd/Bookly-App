@@ -3,6 +3,7 @@ import 'package:bookly/features/home/presentation/manager/featured_books_cubit/f
 import 'package:bookly/features/home/presentation/views/widgets/featured_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
@@ -19,10 +20,17 @@ class FeaturedBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return FeaturedBooksListViewItem(
+                return GestureDetector(
+                  onTap: () {
+                    GoRouter.of(context)
+                        .push('/BooksDetailsView', extra: state.books[index]);
+                  },
+                  child: FeaturedBooksListViewItem(
                     imageUrl:
                         state.books[index].volumeInfo?.imageLinks?.thumbnail ??
-                            '');
+                            '',
+                  ),
+                );
               },
             ),
           );

@@ -8,11 +8,11 @@ class BooksAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+      padding: const EdgeInsets.symmetric(horizontal: 22.0),
       child: Row(
         children: [
           CustomButton(
-              data: '19.99\$',
+              data: 'Free',
               style: Styles.textStyle21Bold.copyWith(color: Colors.black),
               backgroundColor: Colors.white,
               shape: const RoundedRectangleBorder(
@@ -20,7 +20,7 @@ class BooksAction extends StatelessWidget {
                       topLeft: Radius.circular(24),
                       bottomLeft: Radius.circular(24)))),
           CustomButton(
-              data: 'Free Preview',
+              data: 'Add to Library',
               style: Styles.textStyle21Bold.copyWith(color: Colors.white),
               backgroundColor: Colors.orange,
               shape: const RoundedRectangleBorder(
