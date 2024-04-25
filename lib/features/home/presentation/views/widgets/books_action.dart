@@ -1,3 +1,4 @@
+import 'package:bookly/core/utils/launch_url.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:bookly/features/home/data/models/book_model/item.dart';
@@ -23,13 +24,11 @@ class BooksAction extends StatelessWidget {
                       topLeft: Radius.circular(24),
                       bottomLeft: Radius.circular(24)))),
           CustomButton(
-              onPressed: () async {
-                Uri url = Uri.parse(bookModelItem.volumeInfo!.previewLink!);
-                if (await canLaunchUrl(url)) {
-                 await launchUrl(url);
-                }
+              onPressed: () {
+                LaunchCustomUrl(
+                    context, bookModelItem.volumeInfo!.previewLink!);
               },
-              data: 'Preview',
+              data: getText(bookModelItem),
               style: Styles.textStyle21Bold.copyWith(color: Colors.white),
               backgroundColor: Colors.orange,
               shape: const RoundedRectangleBorder(
@@ -39,5 +38,13 @@ class BooksAction extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  getText(Item bookModelItem) {
+    if (bookModelItem.volumeInfo!.previewLink == null) {
+      return 'Not Available';
+    } else {
+      return 'Preview';
+    }
   }
 }
